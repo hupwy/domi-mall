@@ -9,22 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.domi.mall.gateway</groupId>
+    <groupId>com.domi.mall</groupId>
     <artifactId>mall-api-gateway</artifactId>
 
     <name>mall :: gateway :: api</name>
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
+    <description>所有微服务工程的Gateway业务路由</description>
 
-    <dependencies>
-        <!--Redis-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
+<!--    <dependencies>-->
+<!--        &lt;!&ndash;Redis&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
+<!--        </dependency>-->
 
-    </dependencies>
+<!--    </dependencies>-->
 
 </project>
