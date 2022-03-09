@@ -1,9 +1,10 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
-    name: mall-goods
+    name: mall-order
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://rm-bp13anzxt8srb7e377o.mysql.rds.aliyuncs.com:3306/domi_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
@@ -17,16 +18,3 @@ spring:
       discovery:
         #Nacos的注册地址
         server-addr: 182.92.230.171:8848
-
-# ====================MybatisPlus====================
-mybatis-plus:
-  mapper-locations: mapper/*.xml
-  type-aliases-package: com.domi.mall.*.model
-  configuration:
-    map-underscore-to-camel-case: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-#日志配置
-logging:
-  pattern:
-    console: "%msg%n"

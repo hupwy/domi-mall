@@ -14,6 +14,8 @@ import java.util.concurrent.TimeUnit;
  * @Author: <a href="mailto:hupeng@neuedu.com">hupeng</a>
  * @Date: 2022-03-09 16:32
  */
+@RestController
+@RequestMapping("/brand")
 public class BrandController {
 
     @Autowired

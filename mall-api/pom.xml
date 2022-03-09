@@ -42,6 +42,7 @@
         <dependency>
             <groupId>com.domi.mall</groupId>
             <artifactId>mall-util</artifactId>
+            <version>0.0.1</version>
         </dependency>
     </dependencies>
 </project>

@@ -7,6 +7,7 @@ import com.domi.mall.goods.mapper.BrandMapper;
 import com.domi.mall.goods.model.Brand;
 import com.domi.mall.goods.service.IBrandService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
  * @Author: <a href="mailto:hupeng@neuedu.com">hupeng</a>
  * @Date: 2022-03-09 16:34
  */
+@Service
 public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements IBrandService {
 
 
