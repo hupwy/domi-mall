@@ -11,6 +11,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
+    <modules>
+        <module>mall-goods-api</module>
+    </modules>
 
     <artifactId>mall-api</artifactId>
     <version>0.0.1</version>
@@ -18,11 +21,27 @@
     <name>mall :: api</name>
     <description>所有数据库表对应的Bean和Feign接口</description>
 
+    <properties>
+        <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
+    </properties>
     <dependencies>
+        <!--MyBatis Plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <!--openfeign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!--工具包-->
+        <dependency>
+            <groupId>com.domi.mall</groupId>
+            <artifactId>mall-util</artifactId>
         </dependency>
     </dependencies>
 </project>

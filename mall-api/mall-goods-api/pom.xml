@@ -3,27 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>mall-service</artifactId>
+        <artifactId>mall-api</artifactId>
         <groupId>com.domi.mall</groupId>
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.domi.mall</groupId>
-    <artifactId>mall-service-goods</artifactId>
+    <artifactId>mall-goods-api</artifactId>
 
-    <name>mall :: service :: goods</name>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-    <dependencies>
-        <!--goods-api-->
-        <dependency>
-            <groupId>com.domi.mall</groupId>
-            <artifactId>mall-goods-api</artifactId>
-            <version>0.0.1</version>
-        </dependency>
-    </dependencies>
 </project>

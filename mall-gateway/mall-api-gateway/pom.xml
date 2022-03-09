@@ -15,13 +15,20 @@
     <name>mall :: gateway :: api</name>
     <description>所有微服务工程的Gateway业务路由</description>
 
-<!--    <dependencies>-->
-<!--        &lt;!&ndash;Redis&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
-<!--        </dependency>-->
+    <dependencies>
+        <!--Redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
 
-<!--    </dependencies>-->
+        <!--引入util依赖-->
+        <dependency>
+            <groupId>com.domi.mall</groupId>
+            <artifactId>mall-util</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
