@@ -5,18 +5,21 @@
     <parent>
         <artifactId>domi-mall</artifactId>
         <groupId>com.domi.mall</groupId>
-        <version>0.0.1</version>
+        <version>${env-project.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
+
     <modules>
         <module>mall-service-goods</module>
         <module>mall-service-order</module>
     </modules>
 
     <artifactId>mall-service</artifactId>
+    <groupId>com.domi.mall</groupId>
 
     <name>mall :: service</name>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -33,7 +36,7 @@
         <dependency>
             <groupId>com.domi.mall</groupId>
             <artifactId>mall-util</artifactId>
-            <version>0.0.1</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

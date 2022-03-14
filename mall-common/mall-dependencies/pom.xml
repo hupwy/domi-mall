@@ -5,13 +5,12 @@
     <parent>
         <artifactId>mall-common</artifactId>
         <groupId>com.domi.mall</groupId>
-        <version>0.0.1</version>
+        <version>${env-project.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.domi.mall</groupId>
     <artifactId>mall-dependencies</artifactId>
-    <version>0.0.1</version>
 
     <name>mall :: common :: dependencies</name>
     <description>所有微服务工程公共依赖包、所有微服务工程公共配置类</description>
@@ -28,6 +27,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!--MyBatis Plus-->

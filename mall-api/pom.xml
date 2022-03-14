@@ -6,7 +6,7 @@
     <parent>
         <artifactId>domi-mall</artifactId>
         <groupId>com.domi.mall</groupId>
-        <version>0.0.1</version>
+        <version>${env-project.version}</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -16,7 +16,6 @@
     </modules>
 
     <artifactId>mall-api</artifactId>
-    <version>0.0.1</version>
 
     <name>mall :: api</name>
     <description>所有数据库表对应的Bean和Feign接口</description>
@@ -42,7 +41,7 @@
         <dependency>
             <groupId>com.domi.mall</groupId>
             <artifactId>mall-util</artifactId>
-            <version>0.0.1</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
