@@ -78,4 +78,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>rdc-releases</id>
+            <name>Aliyun Release Repository</name>
+            <url>https://packages.aliyun.com/maven/repository/2201638-release-7nEsMr/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <name>Aliyun Snapshot Repository</name>
+            <url>https://packages.aliyun.com/maven/repository/2201638-snapshot-dMkzIX/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
