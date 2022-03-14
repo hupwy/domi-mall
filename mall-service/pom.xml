@@ -23,6 +23,12 @@
     </properties>
 
     <dependencies>
+        <!--web包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <!--工具包依赖-->
         <dependency>
             <groupId>com.domi.mall</groupId>
