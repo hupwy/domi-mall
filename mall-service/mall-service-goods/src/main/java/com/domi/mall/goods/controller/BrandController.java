@@ -22,10 +22,18 @@ public class BrandController {
     private IBrandService brandService;
 
     /****
+     * 测试接口
+     */
+    @GetMapping(value = "/test")
+    public String test() {
+        return "测试成功";
+    }
+
+    /****
      * 增加方法
      */
     @PostMapping
-    public RespResult add(@RequestBody Brand brand){
+    public RespResult add(@RequestBody Brand brand) {
         brandService.save(brand);
         return RespResult.ok();
     }
@@ -34,7 +42,7 @@ public class BrandController {
      * 修改方法
      */
     @PutMapping
-    public RespResult update(@RequestBody Brand brand){
+    public RespResult update(@RequestBody Brand brand) {
         brandService.updateById(brand);
         return RespResult.ok();
     }
@@ -43,7 +51,7 @@ public class BrandController {
      * 删除方法
      */
     @DeleteMapping("/{id}")
-    public RespResult delete(@PathVariable(value = "id")String id){
+    public RespResult delete(@PathVariable(value = "id") String id) {
         brandService.removeById(id);
         return RespResult.ok();
     }
@@ -52,7 +60,7 @@ public class BrandController {
      * 条件查询
      */
     @PostMapping(value = "/search")
-    public RespResult<List<Brand>> queryList(@RequestBody Brand brand){
+    public RespResult<List<Brand>> queryList(@RequestBody Brand brand) {
         List<Brand> brands = brandService.queryList(brand);
         return RespResult.ok(brands);
     }
@@ -61,11 +69,8 @@ public class BrandController {
      * 条件查询
      */
     @PostMapping(value = "/search/{page}/{size}")
-    public RespResult<Page<Brand>> queryPageList(
-            @PathVariable(value = "page")Long page,
-            @PathVariable(value = "size")Long size,
-            @RequestBody Brand brand){
-        Page<Brand> pageInfo = brandService.queryPageList(brand,page,size);
+    public RespResult<Page<Brand>> queryPageList(@PathVariable(value = "page") Long page, @PathVariable(value = "size") Long size, @RequestBody Brand brand) {
+        Page<Brand> pageInfo = brandService.queryPageList(brand, page, size);
         return RespResult.ok(pageInfo);
     }
 
@@ -75,7 +80,7 @@ public class BrandController {
      * http://192.168.100.130/msitems/1.html
      */
     @GetMapping(value = "/category/{pid}")
-    public RespResult<List<Brand>>  categoryBrands(@PathVariable(value = "pid")Integer pid) throws InterruptedException {
+    public RespResult<List<Brand>> categoryBrands(@PathVariable(value = "pid") Integer pid) throws InterruptedException {
         System.out.println("执行查询开始，，，，");
         List<Brand> brands = brandService.queryByCategoryId(pid);
         TimeUnit.SECONDS.sleep(10);
