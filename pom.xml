@@ -31,6 +31,14 @@
         <spring-cloud.version>2021.0.1</spring-cloud.version>
         <!--<spring-cloud.version>Hoxton.SR12</spring-cloud.version>-->
         <spring-cloud-alibaba.version>2.2.7.RELEASE</spring-cloud-alibaba.version>
+
+        <docker-image.version>0.0.1</docker-image.version>
+        <docker.image.prefix>registry.cn-hangzhou.aliyuncs.com</docker.image.prefix>
+        <docker.image.namesapce>domi-mall</docker.image.namesapce>
+
+        <docker.registry.url>registry.cn-hangzhou.aliyuncs.com</docker.registry.url>
+        <docker.registry.server.id>docker-aliyun</docker.registry.server.id>
+
     </properties>
 
     <dependencies>
@@ -93,4 +101,32 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.2.2</version>
+                <configuration>
+                    <serverId>${docker.registry.server.id}</serverId>
+                    <user></user>
+                    <registryUrl>${docker.registry.url}</registryUrl>
+                    <imageName>${docker.image.prefix}/${docker.image.namesapce}/${project.artifactId}</imageName>
+                    <imageTags>
+                        <imageTag>${docker-image.version}</imageTag>
+                        <imageTag>latest</imageTag>
+                    </imageTags>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                    <dockerHost>tcp://172.21.137.222:2375</dockerHost>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
