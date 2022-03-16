@@ -109,7 +109,6 @@
                 <version>1.2.2</version>
                 <configuration>
                     <serverId>${docker.registry.server.id}</serverId>
-                    <user></user>
                     <registryUrl>${docker.registry.url}</registryUrl>
                     <imageName>${docker.image.prefix}/${docker.image.namesapce}/${project.artifactId}</imageName>
                     <imageTags>
