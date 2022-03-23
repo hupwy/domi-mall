@@ -123,7 +123,7 @@
                             <include>${project.build.finalName}.jar</include>
                         </resource>
                     </resources>
-                    <dockerHost>tcp://172.21.137.222:2375</dockerHost>
+                    <dockerHost>http://172.21.137.222:2375</dockerHost>
                 </configuration>
             </plugin>
         </plugins>
