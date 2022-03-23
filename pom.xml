@@ -13,7 +13,7 @@
 
     <groupId>com.domi.mall</groupId>
     <artifactId>domi-mall</artifactId>
-    <version>${env-project.version}</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>mall</name>
     <description>domi-mall</description>
@@ -26,7 +26,7 @@
     </modules>
 
     <properties>
-        <env-project.version>0.0.1-SNAPSHOT</env-project.version>
+        <!--<env-project.version>0.0.1-SNAPSHOT</env-project.version>-->
         <java.version>1.8</java.version>
         <spring-cloud.version>2021.0.1</spring-cloud.version>
         <!--<spring-cloud.version>Hoxton.SR12</spring-cloud.version>-->
