@@ -113,7 +113,6 @@
                     <imageName>${docker.image.prefix}/${docker.image.namesapce}/${project.artifactId}</imageName>
                     <imageTags>
                         <imageTag>${docker-image.version}</imageTag>
-                        <imageTag>latest</imageTag>
                     </imageTags>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
