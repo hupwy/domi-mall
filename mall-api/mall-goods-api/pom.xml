@@ -11,6 +11,7 @@
 
     <artifactId>mall-goods-api</artifactId>
 
+    <name>mall :: api :: mall-goods-api</name>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
